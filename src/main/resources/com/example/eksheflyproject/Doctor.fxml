@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="681.0" style="-fx-background-color: #28252e;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.eksheflyproject.DController">
+   <children>
+      <HBox layoutY="14.0" prefHeight="100.0" prefWidth="902.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="74.0" prefWidth="649.0" style="-fx-border-color: #0Fea88; -fx-border-width: 5;" text="Welcome  Doctor" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="50.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <AnchorPane fx:id="Main_pane" layoutX="10.0" layoutY="119.0" prefHeight="408.0" prefWidth="661.0">
+         <children>
+            <Button fx:id="req_btn" layoutX="466.0" layoutY="69.0" mnemonicParsing="false" onAction="#rqstPaneShow" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #0Fea88;" text="Request Test" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="drgs_btn" layoutX="466.0" layoutY="176.0" mnemonicParsing="false" onAction="#drgsPaneShow" prefHeight="0.0" prefWidth="127.0" style="-fx-background-color: #0Fea88;" text="Prescribe Drugs" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="sch_btn" layoutX="466.0" layoutY="291.0" mnemonicParsing="false" onAction="#schPaneShow" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #0Fea88;" text="View Schedule" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="his_btn" layoutX="466.0" layoutY="238.0" mnemonicParsing="false" onAction="#hisPaneShow" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #0Fea88;" text="Patient's History" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="dig_btn" layoutX="466.0" layoutY="120.0" mnemonicParsing="false" onAction="#digPaneShow" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #0Fea88;" text="Enter Diagnosis" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="imageview" fitHeight="270.0" fitWidth="416.0" layoutX="35.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@kissclipart-medical-specialist-icon-clipart-physician-medicine-a4483277c27e6967.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="rqst_pane" layoutX="10.0" layoutY="119.0" prefHeight="408.0" prefWidth="661.0" visible="false">
+         <children>
+            <TextField fx:id="reqID" layoutX="164.0" layoutY="122.0" promptText="Patient ID" />
+            <ComboBox fx:id="Test_type" layoutX="362.0" layoutY="122.0" prefWidth="150.0" promptText="Choose test" />
+            <Button fx:id="home_btn" layoutX="534.0" layoutY="366.0" mnemonicParsing="false" onAction="#rqstReturnToHome" style="-fx-background-color: #0Fea88;" text="Return to home" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+            <Label layoutX="39.0" layoutY="123.0" prefHeight="23.0" prefWidth="102.0" text="Patient's ID" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="requestTestBtn" layoutX="260.0" layoutY="185.0" mnemonicParsing="false" onAction="#do_request" style="-fx-background-color: #0Fea88;" text="Request Test" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="dig_pane" layoutX="10.0" layoutY="119.0" prefHeight="408.0" prefWidth="661.0" visible="false">
+         <children>
+            <Button fx:id="home_btn" layoutX="534.0" layoutY="366.0" mnemonicParsing="false" onAction="#digReturnToHome" style="-fx-background-color: #0Fea88;" text="Return to home" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+            <TextField fx:id="hisID" layoutX="42.0" layoutY="99.0" promptText="Patient ID" />
+            <TextField fx:id="hisDig" layoutX="241.0" layoutY="99.0" promptText="Diagnosis" />
+            <Button fx:id="updateHis_btn" layoutX="146.0" layoutY="176.0" mnemonicParsing="false" onAction="#updateHistory" style="-fx-background-color: #0Fea88;" text="Update medical history" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="drgs_pane" layoutX="10.0" layoutY="119.0" prefHeight="408.0" prefWidth="661.0" visible="false">
+         <children>
+            <Button fx:id="home_btn" layoutX="534.0" layoutY="366.0" mnemonicParsing="false" onAction="#drgsReturnToHome" style="-fx-background-color: #0Fea88;" text="Return to home" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+            <TextField fx:id="drgName" layoutX="35.0" layoutY="86.0" promptText="Drug name" />
+            <TextField fx:id="drgID" layoutX="235.0" layoutY="86.0" promptText="Patient ID" />
+            <Button fx:id="prscDrug_btn" layoutX="157.0" layoutY="156.0" mnemonicParsing="false" onAction="#presDrug" style="-fx-background-color: #0Fea88;" text="Prescribe drug" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="his_pane" layoutX="10.0" layoutY="119.0" prefHeight="408.0" prefWidth="661.0" visible="false">
+         <children>
+            <Button fx:id="home_btn" layoutX="534.0" layoutY="366.0" mnemonicParsing="false" onAction="#hisReturnToHome" style="-fx-background-color: #0Fea88;" text="Return to home" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+            <TextField layoutX="67.0" layoutY="178.0" promptText="Patient ID" />
+            <Button fx:id="medHistory_btn" layoutX="286.0" layoutY="176.0" mnemonicParsing="false" onAction="#actualHisPaneShow" style="-fx-background-color: #0Fea88;" text="View medical history" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+            <Label layoutX="14.0" layoutY="32.0" text="Enter patients ID to view their medical history:" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="sch_pane" layoutX="10.0" layoutY="119.0" prefHeight="408.0" prefWidth="661.0" visible="false">
+         <children>
+            <Button fx:id="home_btn" layoutX="534.0" layoutY="366.0" mnemonicParsing="false" onAction="#schReturnToHome" style="-fx-background-color: #0Fea88;" text="Return to home" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button fx:id="lg_btn" alignment="CENTER" mnemonicParsing="false" onAction="#logout" prefHeight="52.0" prefWidth="661.0" style="-fx-background-color: #4e5e51;" text="Log Out" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font name="Times New Roman Bold" size="30.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="actualHis_pane" layoutX="10.0" layoutY="119.0" prefHeight="408.0" prefWidth="661.0" visible="false">
+         <children>
+            <Button fx:id="home_btn" layoutX="534.0" layoutY="366.0" mnemonicParsing="false" onAction="#actualHisPaneReturnToHome" style="-fx-background-color: #0Fea88;" text="Return to home" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

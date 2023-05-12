@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="681.0" style="-fx-background-color: #28252e;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.eksheflyproject.AController">
+   <children>
+      <HBox layoutY="14.0" prefHeight="100.0" prefWidth="902.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="74.0" prefWidth="649.0" style="-fx-border-color: #0Fea88; -fx-border-width: 5;" text="Welcome  Admin" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="50.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <Button fx:id="lg_btn" layoutX="10.0" layoutY="528.0" mnemonicParsing="false" onAction="#logout" prefHeight="52.0" prefWidth="661.0" style="-fx-background-color: #4e5e51;" text="Log Out" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font name="Times New Roman Bold" size="30.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="Main_pane" layoutX="10.0" layoutY="114.0" prefHeight="408.0" prefWidth="661.0">
+         <children>
+            <Button fx:id="new_btn" layoutX="453.0" layoutY="102.0" mnemonicParsing="false" onAction="#newAccPaneShow" prefHeight="28.0" prefWidth="154.0" style="-fx-background-color: #0Fea88;" text="Create new account" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="rmv_btn" layoutX="453.0" layoutY="161.0" mnemonicParsing="false" onAction="#removeAccShow" prefHeight="28.0" prefWidth="154.0" style="-fx-background-color: #0Fea88;" text="Remove account" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="app_btn" layoutX="453.0" layoutY="225.0" mnemonicParsing="false" onAction="#appPaneShow" prefHeight="28.0" prefWidth="154.0" style="-fx-background-color: #0Fea88;" text="Schedule appointment" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="sch_btn" layoutX="453.0" layoutY="294.0" mnemonicParsing="false" onAction="#schPaneShow" prefHeight="28.0" prefWidth="154.0" style="-fx-background-color: #0Fea88;" text="View Doctor schedule" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="imageview" fitHeight="270.0" fitWidth="416.0" layoutX="35.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Admin_logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="chooseUserAcc_pane" layoutX="10.0" layoutY="122.0" prefHeight="408.0" prefWidth="661.0" visible="false">
+         <children>
+            <Button fx:id="home_btn" layoutX="520.0" layoutY="365.0" mnemonicParsing="false" onAction="#newAccReturnToHome" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #0Fea88;" text="Return to home" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+            <Label text="Choose type of user:" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="30.0" />
+               </font>
+            </Label>
+            <Button fx:id="patAcc_btn" layoutX="498.0" layoutY="176.0" mnemonicParsing="false" onAction="#createPatAccShow" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #0Fea88;" text="Patient" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="pharAcc_btn" layoutX="252.0" layoutY="176.0" mnemonicParsing="false" onAction="#createPharmAccShow" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #0Fea88;" text="Pharmacist" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="drAcc_btn" layoutX="26.0" layoutY="176.0" mnemonicParsing="false" onAction="#createDrAccPaneShow" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #0Fea88;" text="Doctor" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="app_pane" layoutX="10.0" layoutY="122.0" prefHeight="408.0" prefWidth="661.0" visible="false">
+         <children>
+            <Button fx:id="home_btn" layoutX="520.0" layoutY="366.0" mnemonicParsing="false" onAction="#appReturnToHome" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #0Fea88;" text="Return to home" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="createDrAcc_pane" layoutX="10.0" layoutY="109.0" prefHeight="419.0" prefWidth="661.0" visible="false">
+         <children>
+            <TextField fx:id="firstNameField" layoutX="27.0" layoutY="40.0" promptText="First Name" />
+            <TextField fx:id="lastNameField" layoutX="220.0" layoutY="40.0" promptText="Last Name" />
+            <TextField fx:id="user" layoutX="27.0" layoutY="98.0" promptText="UserName" />
+            <TextField fx:id="pass" layoutX="220.0" layoutY="98.0" promptText="Password" />
+            <TextField fx:id="specialityTF" layoutX="27.0" layoutY="146.0" promptText="Speciality" />
+            <TextField fx:id="phoneNum" layoutX="27.0" layoutY="204.0" promptText="Phone Number" />
+            <TextField fx:id="ageTF" layoutX="27.0" layoutY="259.0" promptText="Age" />
+            <Button fx:id="createDoctorButton" disable="true" layoutX="512.0" layoutY="159.0" mnemonicParsing="false" onAction="#createDr" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #0Fea88;" text="Create Account" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="home_btn" layoutX="520.0" layoutY="377.0" mnemonicParsing="false" onAction="#createDrAccReturnToHome" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #0Fea88;" text="Return to home" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="add_sched_btn" layoutX="24.0" layoutY="307.0" mnemonicParsing="false" onAction="#add_sched" prefHeight="28.0" prefWidth="154.0" style="-fx-background-color: #0Fea88;" text="Add Schedule" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="gender_box" layoutX="219.0" layoutY="146.0" prefWidth="150.0" promptText="Gender" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="sch_pane" layoutX="10.0" layoutY="122.0" prefHeight="408.0" prefWidth="661.0" visible="false">
+         <children>
+            <Button fx:id="home_btn" layoutX="520.0" layoutY="366.0" mnemonicParsing="false" onAction="#schReturnToHome" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #0Fea88;" text="Return to home" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="createPharmAcc_pane" layoutX="10.0" layoutY="122.0" prefHeight="408.0" prefWidth="661.0" visible="false">
+         <children>
+            <Button fx:id="home_btn" layoutX="520.0" layoutY="366.0" mnemonicParsing="false" onAction="#createPharmAccReturnToHome" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #0Fea88;" text="Return to home" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+            <TextField fx:id="pharFirst" layoutX="32.0" layoutY="50.0" promptText="First Name" />
+            <TextField fx:id="pharLast" layoutX="226.0" layoutY="50.0" promptText="Last Name" />
+            <TextField fx:id="pharUser" layoutX="32.0" layoutY="113.0" promptText="UserName" />
+            <TextField fx:id="pharPass" layoutX="226.0" layoutY="113.0" promptText="Password" />
+            <TextField fx:id="pharAge" layoutX="32.0" layoutY="179.0" promptText="Age" />
+            <ComboBox fx:id="pharGender" layoutX="32.0" layoutY="257.0" prefWidth="150.0" promptText="Gender" />
+            <Button fx:id="phar_btn" layoutX="520.0" layoutY="165.0" mnemonicParsing="false" onAction="#createPhar" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #0Fea88;" text="Create Account" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="createPatAcc_pane" layoutX="10.0" layoutY="122.0" prefHeight="408.0" prefWidth="661.0" visible="false">
+         <children>
+            <TextField fx:id="patFirst" layoutX="28.0" layoutY="45.0" promptText="First Name" />
+            <TextField fx:id="patLast" layoutX="240.0" layoutY="45.0" promptText="Last Name" />
+            <TextField fx:id="patuser" layoutX="28.0" layoutY="98.0" promptText="UserName" />
+            <TextField fx:id="patPW" layoutX="240.0" layoutY="98.0" promptText="Password" />
+            <TextField fx:id="patAge" layoutX="28.0" layoutY="154.0" promptText="Age" />
+            <TextField fx:id="patBT" layoutX="28.0" layoutY="211.0" promptText="Blood Type" />
+            <ComboBox fx:id="patGender" layoutX="28.0" layoutY="273.0" prefWidth="150.0" promptText="Gender" />
+            <Button fx:id="home_btn" layoutX="520.0" layoutY="366.0" mnemonicParsing="false" onAction="#createPatAccReturnToHome" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #0Fea88;" text="Return to home" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="pat_btn" layoutX="520.0" layoutY="165.0" mnemonicParsing="false" onAction="#createPat" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #0Fea88;" text="Create Account" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="removeAcc_pane" layoutX="10.0" layoutY="122.0" prefHeight="408.0" prefWidth="661.0" visible="false">
+         <children>
+            <TextField fx:id="userDelete" layoutX="14.0" layoutY="111.0" promptText="UserName" />
+            <ComboBox fx:id="deleteType" layoutX="245.0" layoutY="111.0" prefWidth="150.0" promptText="User Type" />
+            <Label layoutX="23.0" layoutY="31.0" text="Delete User Account: " textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="30.0" />
+               </font>
+            </Label>
+            <Button fx:id="home_btn" layoutX="520.0" layoutY="366.0" mnemonicParsing="false" onAction="#removeAccReturnToHome" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #0Fea88;" text="Return to home" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="delete_btn" layoutX="136.0" layoutY="204.0" mnemonicParsing="false" onAction="#deleteAccount" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #0Fea88;" text="Delete Account" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="sched_pane" layoutX="27.0" layoutY="123.0" prefHeight="390.0" prefWidth="626.0" visible="false">
+         <children>
+            <ComboBox fx:id="saturday_box" layoutX="52.0" layoutY="53.0" prefWidth="150.0" promptText="Saturday" />
+            <ComboBox fx:id="sunday_box" layoutX="52.0" layoutY="114.0" prefWidth="150.0" promptText="Sunday" />
+            <ComboBox fx:id="monday_box" layoutX="52.0" layoutY="170.0" prefWidth="150.0" promptText="Monday" />
+            <ComboBox fx:id="tuesday_box" layoutX="52.0" layoutY="225.0" prefWidth="150.0" promptText="Tuesday" />
+            <ComboBox fx:id="wednesday_box" layoutX="238.0" layoutY="53.0" prefWidth="150.0" promptText="Wednesday" />
+            <ComboBox fx:id="thursday_box" layoutX="238.0" layoutY="114.0" prefWidth="150.0" promptText="Thursday" />
+            <ComboBox fx:id="friday_box" layoutX="238.0" layoutY="171.0" prefWidth="150.0" promptText="Friday" />
+            <Button fx:id="go_btn" layoutX="213.0" layoutY="318.0" mnemonicParsing="false" onAction="#go_back" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #0Fea88;" text="Go Back" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

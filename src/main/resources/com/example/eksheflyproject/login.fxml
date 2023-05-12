@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: #282529;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.eksheflyproject.Main">
+   <children>
+      <HBox layoutY="14.0" prefHeight="75.0" prefWidth="500.0" style="-fx-border-color: #0Fea88; -fx-border-width: 2;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="88.0" prefWidth="496.0" style="-fx-background-color: #4e5e51;" text="Ekshefly" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <AnchorPane fx:id="pane_login" layoutX="14.0" layoutY="100.0" prefHeight="277.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <TextField fx:id="username" layoutX="257.0" layoutY="83.0" onAction="#keypressed" prefHeight="40.0" prefWidth="218.0" promptText="Enter Username" />
+            <PasswordField fx:id="password" layoutX="257.0" layoutY="139.0" onKeyPressed="#keypressed" prefHeight="40.0" prefWidth="218.0" promptText="Enter Password" />
+            <ComboBox fx:id="type" layoutX="259.0" layoutY="14.0" prefHeight="40.0" prefWidth="218.0" promptText="Choose Type" />
+            <Button fx:id="btn_login" layoutX="48.0" layoutY="212.0" mnemonicParsing="false" onAction="#login" onKeyPressed="#login" prefHeight="51.0" prefWidth="403.0" style="-fx-background-color: #0Fea88;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="28.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="42.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@download-icon-avatar+circle+male+profile+user+icon-1320196710301016992_512-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
